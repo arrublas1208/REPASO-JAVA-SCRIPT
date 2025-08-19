@@ -26,3 +26,4 @@ public class SumaHasta1000 {
         System.out.println("Suma total: " + sumaTotal);
     }
 }
+
