@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const lineas = [
+    "20,8,15",
+    "6,28,496",
+    "7,13,17"
+];
+
+
+
+
+function sumaDivisores(n) {
+    let total = 0;
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) total += i;
+    }
+    return total;
+}
+
+lineas.forEach((linea, numLinea) => {
+    console.log(`Línea ${numLinea + 1}:`);
+    linea.split(',').forEach(numStr => {
+        const num = parseInt(numStr);
+        console.log(  `${num} -> ${sumaDivisores(num)}`);
+    });
+});
+    </script>
+</body>
+</html>
