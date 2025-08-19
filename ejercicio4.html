@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+const entrada = "25;18;16;30;22;19;17;35"; 
+
+const edades = entrada.split(';').map(edad => parseInt(edad));
+
+const sumaTotal = edades.reduce((acumulador, edad) => acumulador + edad, 0);
+const promedio = sumaTotal / edades.length;
+
+const mayoresDe18 = edades.filter(edad => edad > 18).length;
+
+
+console.log("Edades ingresadas:", edades.join(", "));
+console.log("Promedio de edad:", promedio.toFixed(2));
+console.log("Personas mayores de 18 años:", mayoresDe18);
+</script>
+</body>
+</html>

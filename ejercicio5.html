@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const entrada = "25;18;16;30;22;19;17;35";
+        const edades = entrada.split(';').map(Number);
+
+        let suma = 0;
+        for (let i = 0; i < edades.length; i++) {
+            suma += edades[i];
+        }
+
+        const promedio = suma / edades.length;
+
+        let mayores = 0;
+        for (let i = 0; i < edades.length; i++) {
+            if (edades[i] > 18) {
+                mayores++;
+            }
+        }
+
+        console.log("Promedio:", promedio.toFixed(2));
+        console.log("Mayores de 18:", mayores);
+    </script>
+</body>
+
+</html>
